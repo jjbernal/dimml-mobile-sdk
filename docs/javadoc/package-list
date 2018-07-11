@@ -1,0 +1,6 @@
+io.o2mc.sdk
+io.o2mc.sdk.business
+io.o2mc.sdk.business.batch
+io.o2mc.sdk.business.event
+io.o2mc.sdk.domain
+io.o2mc.sdk.util
