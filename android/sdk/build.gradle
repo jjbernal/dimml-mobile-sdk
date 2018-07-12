@@ -1,4 +1,8 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+
+//group = 'io.o2mc.sdk'
+//version = '1.0.0'
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
@@ -23,6 +27,24 @@ android {
     }
     debug {
       debuggable true
+    }
+  }
+}
+
+bintray {
+  user = 'edwinvrooij'
+  key = '03db60f75eb48bf78b21e03bd14cb8e0de165d7d'
+  filesSpec {
+    from 'sdk/build/outputs/aar/sdk-release.aar'
+    into '.'
+  }
+  pkg {
+    repo = 'maven'
+    name = 'dimml-mobile-sdk'
+    licenses = ['MIT']
+    vcsUrl = 'https://github.com/O2MC/dimml-mobile-sdk.git'
+    version {
+      name = '1.0.5'
     }
   }
 }
